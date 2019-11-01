@@ -7,10 +7,10 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-nsq-js.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-nsq-js
-[travis-image]: https://img.shields.io/travis/eggjs/egg-nsq-js.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-nsq-js
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-nsq-js.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-nsq-js?branch=master
+[travis-image]: https://img.shields.io/travis/clanaid/egg-nsq-js.svg?style=flat-square
+[travis-url]: https://travis-ci.org/clanaid/egg-nsq-js
+[codecov-image]: https://img.shields.io/codecov/c/github/clanaid/egg-nsq-js.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/clanaid/egg-nsq-js?branch=master
 [download-image]: https://img.shields.io/npm/dm/egg-nsq-js.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-nsq-js
 
