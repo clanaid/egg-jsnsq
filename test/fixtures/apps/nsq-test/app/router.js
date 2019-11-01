@@ -15,6 +15,7 @@ module.exports = app => {
   });
 
   router.get('/getmessage', async ctx => {
+    await sleep(500);
     try {
       await ctx.nsqjs.publish({ topic: 'Test.Topic', msgs: { tag: 'test', body: 'test body' } });
     } catch (err) {
