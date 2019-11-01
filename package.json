@@ -1,0 +1,61 @@
+{
+  "name": "egg-nsq-js",
+  "version": "1.0.0",
+  "description": "nsqjs plugin for egg",
+  "eggPlugin": {
+    "name": "nsqjs"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "nsq",
+    "egg-nsq",
+    "egg-plugin-nsq"
+  ],
+  "dependencies": {
+    "nsqjs": "^0.12.1"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.24.0",
+    "egg-bin": "^4.14.0",
+    "egg-ci": "^1.13.0",
+    "egg-mock": "^3.24.1",
+    "eslint": "^6.6.0",
+    "eslint-config-egg": "^7.5.1",
+    "eslint-config-prettier": "^6.5.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "egg-bin autod"
+  },
+  "files": [
+    "app",
+    "config",
+    "app.js",
+    "lib",
+    "index.d.ts"
+  ],
+  "ci": {
+    "version": "10, 12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clanaid/egg-nsq-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clanaid/egg-nsq-js/issues/issues"
+  },
+  "homepage": "https://github.com/clanaid/egg-nsq-js#readme",
+  "author": "clanaid <miku6590@hotmail.com>",
+  "license": "MIT"
+}
