@@ -1,5 +1,5 @@
 {
-  "name": "egg-nsq-js",
+  "name": "egg-jsnsq",
   "version": "1.0.0",
   "description": "nsqjs plugin for egg",
   "eggPlugin": {
@@ -56,6 +56,6 @@
     "url": "https://github.com/clanaid/egg-nsq-js/issues/issues"
   },
   "homepage": "https://github.com/clanaid/egg-nsq-js#readme",
-  "author": "clanaid <miku6590@hotmail.com>",
+  "author": "clanaid <liang6590@gmail.com>",
   "license": "MIT"
 }

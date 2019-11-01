@@ -1,25 +1,25 @@
-# egg-nsq-js
+# egg-jsnsq
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url]
 
-[npm-image]: https://img.shields.io/npm/v/egg-nsq-js.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-nsq-js
-[travis-image]: https://img.shields.io/travis/clanaid/egg-nsq-js.svg?style=flat-square
-[travis-url]: https://travis-ci.org/clanaid/egg-nsq-js
-[codecov-image]: https://img.shields.io/codecov/c/github/clanaid/egg-nsq-js.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/clanaid/egg-nsq-js?branch=master
-[download-image]: https://img.shields.io/npm/dm/egg-nsq-js.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-nsq-js
+[npm-image]: https://img.shields.io/npm/v/egg-jsnsq.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-jsnsq
+[travis-image]: https://img.shields.io/travis/clanaid/egg-jsnsq.svg?style=flat-square
+[travis-url]: https://travis-ci.org/clanaid/egg-jsnsq
+[codecov-image]: https://img.shields.io/codecov/c/github/clanaid/egg-jsnsq.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/clanaid/egg-jsnsq?branch=master
+[download-image]: https://img.shields.io/npm/dm/egg-jsnsq.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-jsnsq
 
 nsq client protocol based on [nsqjs](https://github.com/dudleycarr/nsqjs) for egg framework
 
 ## Install
 
 ```bash
-$ npm i egg-nsq-js --save
+$ npm i egg-jsnsq --save
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Enable the nsqjs plugin
 // {app_root}/config/plugin.js
 exports.nsq = {
   enable: true,
-  package: 'egg-nsq-js',
+  package: 'egg-jsnsq',
 };
 ```
 
@@ -110,7 +110,7 @@ the export of the subscription code can be a class or function/asyncFunction
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/clanaid/egg-jsnsq/issues).
 
 ## License
 
