@@ -38,7 +38,24 @@ In controller/service, you can use `app.nsqjs` or `ctx.nsqjs` to get the nsqjs i
 
 ### nsqjs
 
-- `publish(msg)`
+- `publish(msg: Message)`
+
+  publish a message or a list of messages to the connected nsqd. 
+
+  `msg.msgs ` is either a string, a `Buffer`, JSON serializable object, a list of strings / `Buffers` / JSON serializable objects. See [nsqjs.Writer]( https://github.com/dudleycarr/nsqjs )
+
+  ```js
+  interface Message{
+      topic: String;
+      msgs: any;
+  }
+  ```
+
+  
+
+- `deferPublish(msg: Message, timeMs: Number)`
+
+  publish a message to the connected nsqd with delay.   `timeMs` is the delay by which the message should be delivered. 
 
 ## Configuration
 
