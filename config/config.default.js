@@ -8,8 +8,8 @@
 exports.nsqjs = {
   default: {
     host: '',
-    nsqlookupd_port: '',
-    nsqd_port: '',
+    nsqlookupd_http_port: '',
+    nsqd_tcp_port: '',
     // more options refer to the document of nsqjs Writer.
     // options:{}
   },

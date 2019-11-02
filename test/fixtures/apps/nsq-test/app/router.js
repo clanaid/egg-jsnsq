@@ -14,8 +14,25 @@ module.exports = app => {
     ctx.body = 'hi, nsq';
   });
 
+  router.get('/getmessage_delay', async ctx => {
+    try {
+      await ctx.nsqjs.deferPublish(
+        {
+          topic: 'Test.Topic',
+          msgs: { tag: 'defer', body: 'test deferPublish' },
+        },
+        500
+      );
+    } catch (err) {
+      assert.fail(err);
+    }
+    while (!ctx.app.nsqMsg.has('test')) {
+      await sleep(100);
+    }
+    ctx.body = 'ok';
+  });
+
   router.get('/getmessage', async ctx => {
-    await sleep(500);
     try {
       await ctx.nsqjs.publish({ topic: 'Test.Topic', msgs: { tag: 'test', body: 'test body' } });
     } catch (err) {

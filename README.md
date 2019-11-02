@@ -40,22 +40,20 @@ In controller/service, you can use `app.nsqjs` or `ctx.nsqjs` to get the nsqjs i
 
 - `publish(msg: Message)`
 
-  publish a message or a list of messages to the connected nsqd. 
+  publish a message or a list of messages to the connected nsqd.
 
-  `msg.msgs ` is either a string, a `Buffer`, JSON serializable object, a list of strings / `Buffers` / JSON serializable objects. See [nsqjs.Writer]( https://github.com/dudleycarr/nsqjs )
+  `msg.msgs` is either a string, a `Buffer`, JSON serializable object, a list of strings / `Buffers` / JSON serializable objects. See [nsqjs.Writer](https://github.com/dudleycarr/nsqjs)
 
   ```js
-  interface Message{
-      topic: String;
-      msgs: any;
+  interface Message {
+    topic: String;
+    msgs: any;
   }
   ```
 
-  
+* `deferPublish(msg: Message, timeMs: Number)`
 
-- `deferPublish(msg: Message, timeMs: Number)`
-
-  publish a message to the connected nsqd with delay.   `timeMs` is the delay by which the message should be delivered. 
+  publish a message to the connected nsqd with delay. `timeMs` is the delay by which the message should be delivered.
 
 ## Configuration
 
@@ -64,8 +62,8 @@ In controller/service, you can use `app.nsqjs` or `ctx.nsqjs` to get the nsqjs i
 exports.nsq = {
     default:{
         host:'',
-        nsqlookupd_port:,
-
+        nsqlookupd_http_port:,
+        nsqd_tcp_port:,
     },
     sub:[
         {
@@ -124,6 +122,8 @@ the export of the subscription code can be a class or function/asyncFunction
     // enter your code
   };
   ```
+  
+  received msg will be an` JSON Object` (If it can be resolved) or `Buffer`
 
 ## Questions & Suggestions
 
