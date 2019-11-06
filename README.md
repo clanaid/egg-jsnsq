@@ -28,7 +28,7 @@ Enable the nsqjs plugin
 
 ```js
 // {app_root}/config/plugin.js
-exports.nsq = {
+exports.nsqjs = {
   enable: true,
   package: 'egg-jsnsq',
 };
