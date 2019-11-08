@@ -60,18 +60,20 @@ In controller/service, you can use `app.nsqjs` or `ctx.nsqjs` to get the nsqjs i
 ```js
 // {app_root}/config/config.default.js
 exports.nsq = {
-    default:{
-        host:'',
-        nsqlookupd_http_port:,
-        nsqd_tcp_port:,
-    },
-    sub:[
-        {
-            topic:'',
-            channel:'',
-            // opts:{}
-        }
-    ]
+  reader: {
+    host: 'YOUR_HOST',
+    http_port: 4161,
+    sub: [
+      {
+        topic: '',
+        channel: '',
+      },
+    ],
+  },
+  writer: {
+    host: 'YOUR_HOST',
+    port: 4150,
+  },
 };
 ```
 
@@ -122,8 +124,8 @@ the export of the subscription code can be a class or function/asyncFunction
     // enter your code
   };
   ```
-  
-  received msg will be an` JSON Object` (If it can be resolved) or `Buffer`
+
+  received msg will be an`JSON Object` (If it can be resolved) or `Buffer`
 
 ## Questions & Suggestions
 

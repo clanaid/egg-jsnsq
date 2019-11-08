@@ -6,19 +6,22 @@
  * @property {String} SOME_KEY - some description
  */
 exports.nsqjs = {
-  default: {
-    host: '',
-    nsqlookupd_http_port: '',
-    nsqd_tcp_port: '',
+  reader: {
+    host: 'YOUR_HOST',
+    http_port: 4161,
+    sub: [
+      // {
+      //   topic: '',
+      //   channel: '',
+      //   // more options refer to the document of nsqjs Reader.
+      //   opts: {},
+      // },
+    ],
+  },
+  writer: {
+    host: 'YOUR_HOST',
+    port: 4150,
     // more options refer to the document of nsqjs Writer.
     // options:{}
   },
-  sub: [
-    // {
-    //   topic: '',
-    //   channel: '',
-    //   // more options refer to the document of nsqjs Reader.
-    //   opts: {},
-    // },
-  ],
 };
