@@ -25,7 +25,7 @@ describe('test/nsq.test.js', () => {
 
   it('test get nsq by context', () => {
     const ctx = app.mockContext();
-    assert(ctx.nsqjs.version() === '1.0.1');
+    assert(ctx.nsqjs);
   });
 
   it('test publish and subscribe', async () => {
