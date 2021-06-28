@@ -3,17 +3,16 @@
 exports.keys = '123456';
 exports.nsqjs = {
   reader: {
-    host: '127.0.0.1',
-    http_port: 4161,
-    sub: [
-      {
+    lookupdHTTPAddresses: '127.0.0.1:4161',
+    sub: {
+      TestTopic: {
         topic: 'Test.Topic',
         channel: 'device_update',
       },
-    ],
+    },
   },
   writer: {
-    host: '127.0.0.1',
-    port: 4150,
+    nsqdHost: '127.0.0.1',
+    nsqdPort: 4150,
   },
 };

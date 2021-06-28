@@ -7,20 +7,20 @@
  */
 exports.nsqjs = {
   reader: {
-    host: 'YOUR_HOST',
-    http_port: 4161,
-    sub: [
-      // {
-      //   topic: '',
-      //   channel: '',
-      //   // more options refer to the document of nsqjs Reader.
-      //   opts: {},
-      // },
-    ],
+    lookupdHTTPAddresses: 'YOUR_HOST:PORT', // string or array of strings
+    sub: {
+      // key is subscription code file name
+      key: {
+        //   topic: '',
+        //   channel: '',
+        //   // more options refer to the document of nsqjs Reader.
+        //   opts: {},
+      },
+    },
   },
   writer: {
-    host: 'YOUR_HOST',
-    port: 4150,
+    nsqdHost: 'YOUR_HOST',
+    nsqdPort: 4150,
     // more options refer to the document of nsqjs Writer.
     // options:{}
   },

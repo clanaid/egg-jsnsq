@@ -61,18 +61,18 @@ In controller/service, you can use `app.nsqjs` or `ctx.nsqjs` to get the nsqjs i
 // {app_root}/config/config.default.js
 exports.nsq = {
   reader: {
-    host: 'YOUR_HOST',
-    http_port: 4161,
-    sub: [
-      {
+    lookupdHTTPAddresses: 'YOUR_HOST:PORT',
+    sub:{
+      demo:{
         topic: '',
         channel: '',
       },
-    ],
+    }
+    // other options are the same as those of the nsqjs library
   },
   writer: {
-    host: 'YOUR_HOST',
-    port: 4150,
+    nsqdHost: 'YOUR_HOST',
+    nsqdPort: 4150,
   },
 };
 ```
@@ -83,13 +83,13 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ### Subscriber
 
-put your subscription codes under the folder `{app_root}/app/nsq` and named as the topic name e.g `Test.Topic.js`
+put your subscription code in the folder `{app_root}/app/nsq` and name it as the key of the sub configuration, such as `demo.js`
 
 ```
 .
 ├── app
 │   ├── nsq
-│   │   └── Test.Topic.js
+│   │   └── demo.js
 │   ├── public
 │   └── router.js
 ├── config
