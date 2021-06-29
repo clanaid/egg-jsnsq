@@ -1,6 +1,6 @@
 {
   "name": "egg-jsnsq",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "nsqjs plugin for egg",
   "eggPlugin": {
     "name": "nsqjs"
