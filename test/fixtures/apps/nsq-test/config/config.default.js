@@ -8,6 +8,7 @@ exports.nsqjs = {
       TestTopic: {
         topic: 'Test.Topic',
         channel: 'device_update',
+        lookupdPollInterval: 5,
       },
     },
   },
