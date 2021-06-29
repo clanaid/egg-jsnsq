@@ -18,10 +18,10 @@ exports.nsqjs = {
       // },
     },
   },
-  writer: {
-    // nsqdHost: 'YOUR_HOST',
-    // nsqdPort: 4150,
-    // more options refer to the document of nsqjs Writer.
-    // options:{}
-  },
+  // writer: {
+  // nsqdHost: 'YOUR_HOST',
+  // nsqdPort: 4150,
+  // more options refer to the document of nsqjs Writer.
+  // options:{}
+  // },
 };
